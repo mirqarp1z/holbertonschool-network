@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script listens on port 98 on localhost and prints any received text.
+
+# apt update
+# apt install -y netcat-traditional
+# apt install telnet
+
+# nc (netcat) is a simple tool to listen on ports and read incoming data
+nc -l -p 98

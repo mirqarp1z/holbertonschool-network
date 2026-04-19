@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Change localhost -> 127.0.0.2 and facebook.com -> 8.8.8.8
+
+cat <<EOF > /etc/hosts
+127.0.0.2   localhost
+8.8.8.8     facebook.com
+EOF

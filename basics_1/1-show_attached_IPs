@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script prints all active IPv4 addresses on the machine.
+
+# Use ip command to list IPv4 addresses, then filter with awk.
+# - ip -4 addr show → shows only IPv4 addresses
+# - awk '/inet/ {print $2}' → prints the "IP/mask"
+# - cut -d/ -f1 → removes the subnet mask, leaving just the IP
+# ip -4 addr show | awk '/inet/ {print $2}' | cut -d/ -f1
+ifconfig | grep 'inet ' | awk '{print $2}'
